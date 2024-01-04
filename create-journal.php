@@ -93,40 +93,47 @@ if(isset($_POST['draft'])){
 
 }
 
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Journal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mhj</title>
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 
-<link rel="stylesheet" href="assets/css/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-free/css/all.min.css">
 
-<link rel="stylesheet" href="assets/css/adminlte.min.css">
+    <link rel="stylesheet" href="assets/overlayScrollbars/css/OverlayScrollbars.min.css">
 
-<link rel="stylesheet" href="assets/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="assets/sweetalert2/dist/sweetalert2.min.css">
 
-<link href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" rel="stylesheet" />
-
-<link rel="stylesheet" href="assets/css/adminlte.min.css">
+    <link rel="stylesheet" href="assets/css/adminlte.min.css">
 
 </head>
+
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         
-   
-        <section class="content-header">
-        <div class="container-fluid">
-        <div class="row mb-2">
-                        <div class="col-sm-6">
-   <h1 class="heading">add new Journal</h1>
+        <?php
+        /* Navbar */
+        include('includes/student-navbar.php');
+        /* Sidebar */
+        include('includes/student-sidebar.php');
+        ?>
 
-   <form action="" method="post" enctype="multipart/form-data">
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>Daily Journal </h1>
+<form action="" method="post" enctype="multipart/form-data">
       <p>Journal title <span>*</span></p>
       <input type="text" name="title" maxlength="100" required placeholder="add post title" class="box">
       <p>post content <span>*</span></p>
@@ -145,41 +152,32 @@ if(isset($_POST['draft'])){
       <p>post image</p>
       <input type="file" name="image" class="box" accept="image/jpg, image/jpeg, image/png, image/webp">
       <div class="flex-btn">
-         <input type="submit" value="Shared" name="publish" class="btn">
+         <input type="submit" value="Shared" name="publish" class="option-btn">
          <input type="submit" value="Private" name="draft" class="option-btn">
-      </div>
-      </div>
-      </div>
-      </div>
-   </form>
+                        </div>
+                    </div>
+                </div><!-- /.container-fluid -->
+            </section>
+        </div>
+        <!-- /.content-wrapper -->
+    
+        <aside class="control-sidebar control-sidebar-dark">
 
-</section>
+        </aside>
 
+    </div>
 
+    <script src="assets/js/jquery/jquery.min.js"></script>
 
+    <script src="assets/js/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <script src="assets/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 
-<aside class="control-sidebar control-sidebar-dark">
+    <script src="assets/js/adminlte.min.js"></script>
 
-</aside>
+    <script src="assets/js/activesidebar.js"></script>
 
-
-
-
-
-<script src="assets/js/jquery/jquery.min.js"></script>
-
-<script src="assets/js/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<script src="assets/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-
-<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-<script src="assets/js/datatable.js"></script>
-
-<script src="assets/js/adminlte.min.js"></script>
-
-<script src="assets/js/activesidebar.js"></script>
-
+    <script src="assets/sweetalert2/dist/sweetalert2.all.min.js"></script>
 
 </body>
 </html>
